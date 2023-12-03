@@ -5,6 +5,8 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/Home.css';
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import createUtilityClassName from "react-bootstrap/esm/createUtilityClasses";
+import { getDefaultNormalizer } from "@testing-library/react";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -101,8 +103,8 @@ const Home = () => {
     // Reset any changes made during editing if needed
   };
 
-  const handleDeleteAction = (id) => {
-    const confirmation = window.confirm(`Are you sure you want to delete the row with ID ${id}?`);
+  const handleDeleteAction = (id,name) => {
+    const confirmation = window.confirm(`Are you sure you want to delete the row with name ${name}?`);
     
     if (confirmation) {
       setData((prevData) => prevData.filter((row) => row.id !== id));
@@ -196,7 +198,7 @@ const Home = () => {
               <Button
                 variant="danger"
                 className="delete mx-2"
-                onClick={() => handleDeleteAction(row.id)}
+                onClick={() => handleDeleteAction(row.id, row.name)}
               >
                 Delete
               </Button>
