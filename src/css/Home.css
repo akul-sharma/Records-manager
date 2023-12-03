@@ -1,0 +1,23 @@
+.selected-row {
+    background-color: rgba(169, 169, 169, 0.7); 
+}
+.table th {
+    background-color: #343a40; /* Set a background color for the header cells */
+    color: white; /* Set the text color for the header cells */
+    font-weight: bold; /* Make the text bold */
+    text-align: left; /* Align the text to the left */
+    padding: 10px; /* Add padding for better readability */
+  }
+  
+  /* Add a hover effect for the header cells */
+  .table th:hover {
+    background-color: #495057; /* Change background color on hover */
+  }
+.header{
+  color: white;
+  font-family:  'Pacifico', cursive;
+}  
+.info{
+    font-family: 'Dancing Script', cursive;
+}
+
